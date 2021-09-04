@@ -38,5 +38,5 @@ def runCode2():
 	fig3.update_layout(autosize=False,width=1280,height=700,title_text="&nbsp;&nbsp;&nbsp;Name of Astronauts on ISS")
 	plotly.offline.plot(fig3,filename='C:\\Users\\Rokky\\Desktop\\Application\\templates\\names.html',auto_open=False)
 	    
-if __name__ == '__main__':
-   app.run(debug = True)
+#if __name__ == '__main__':
+   ##app.run(debug = True)
