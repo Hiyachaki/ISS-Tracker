@@ -1,0 +1,70 @@
+
+@keyframes transitionEff {
+    from {
+        opacity: 0;
+        transform: rotateX: (-10deg);
+    }
+
+
+    to {
+        opacity: 1;
+        transform: rotateX: (0);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+
+
+
+.image{
+position:relative;
+width:900px;
+margin-left:27.5%;
+margin-right:22.5%;
+transition:transform 1s;
+}
+.image_img{
+display:block;
+width:70%;
+animation: transitionEff 10s;
+
+
+}
+
+
+.image_overlay{
+position:absolute;
+top:0;
+left:0;
+width:70%;
+height:100%;
+background:rgba(0,0,0,0.4);
+color:#ffffff;
+font-family:"Comic Sans MS", cursive, sans-serif;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+animation: transitionEff 12s;
+
+}
+
+.image:hover
+{
+transform:scale(1.1);
+}
+
+.hello{
+animation: transitionEff 6s;	
+}
+
+.button1{
+    cursor: pointer;
+	animation: transitionEff 9s;
+}
+
+.button1:hover{
+	background-color:aqua;
+	color:black;
+	transition:color 2s;
+	}
