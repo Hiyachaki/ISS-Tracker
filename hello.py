@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    
     return render_template('hello.html')
 @app.route('/getImage')
 def image():
@@ -26,7 +25,7 @@ def runCode():
 	df.reset_index(inplace=True)
 	df=df.drop(['index','message'],axis=1)
 	fig=px.scatter_geo(df,lat='latitude',lon='longitude',title='Position of International Space Station<br>(Refer blue dot in the globe)',projection='natural earth')
-	plotly.offline.plot(fig,filename='C:\\Users\\Rokky\\Desktop\\Application\\templates\\map1.html',auto_open=False)
+	plotly.offline.plot(fig,filename='C:\\Users\\Hiyachaki\\Desktop\\ISS-Tracker\\templates\\map1.html',auto_open=False)
 
 def runCode2():
 	url1='http://api.open-notify.org/astros.json'
@@ -36,7 +35,7 @@ def runCode2():
 	df2['people']=[i['name'] for i in df2['people']]
 	fig3=go.Figure(data=[go.Table(header=dict(values=list(df2.columns)),cells=dict(values=[df2.people]))])
 	fig3.update_layout(autosize=False,width=1280,height=700,title_text="&nbsp;&nbsp;&nbsp;Name of Astronauts on ISS")
-	plotly.offline.plot(fig3,filename='C:\\Users\\Rokky\\Desktop\\Application\\templates\\names.html',auto_open=False)
+	plotly.offline.plot(fig3,filename='C:\\Users\\Hiyachaki\\Desktop\\ISS-Tracker\\templates\\names.html',auto_open=False)
 	    
 #if __name__ == '__main__':
    ##app.run(debug = True)
